@@ -136,6 +136,7 @@
         }
         .designer-info span { color: var(--accent-orange); font-weight: bold; }
     </style>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
 </head>
 <body>
 
@@ -181,6 +182,24 @@
             </div>
         </footer>
     </div>
-
+<script>
+    // هذا الكود يشتغل أول ما تحمل الصفحة
+    window.onload = function() {
+        Swal.fire({
+            title: 'أهلاً بك في صرح النخبة 🫶🏻',
+            text: 'م . د. ريم محمد ترحب بك في نقابة المبرمجين العراقيين',
+            icon: 'success', 
+            background: '#000814', /* لون النيلي العميق الخاص بموقعك */
+            color: '#ffffff',
+            confirmButtonColor: '#ff8c00', /* اللون البرتقالي */
+            confirmButtonText: 'دخول المنصة',
+            timer: 5000, /* الرسالة تختفي تلقائياً بعد 5 ثوانٍ */
+            timerProgressBar: true, /* شريط تقدم بالأسفل يعطي شكل احترافي */
+            showClass: {
+                popup: 'animate__animated animate__fadeIn'
+            }
+        });
+    };
+</script>
 </body>
 </html>
