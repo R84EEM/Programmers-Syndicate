@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المبادرات | نقابة المبرمجين العراقيين</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --accent-orange: #ff8c00;
+            --navy-deep: #000814;
+            --navy-light: #001d3d;
+            --glow: rgba(255, 140, 0, 0.4);
+            --glass-white: rgba(255, 255, 255, 0.05);
+        }
+
+        * { box-sizing: border-box; transition: all 0.3s ease; margin: 0; padding: 0; }
+
+        body, html {
+            height: 100vh; overflow: hidden;
+            font-family: 'Cairo', sans-serif; 
+            background: radial-gradient(circle at center, var(--navy-light) 0%, var(--navy-deep) 100%);
+            color: #fff;
+        }
+
+        .wrapper {
+            display: flex; flex-direction: column; height: 100vh;
+            background-image: linear-gradient(rgba(255, 140, 0, 0.02) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 140, 0, 0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* الهيدر الثابت */
+        header {
+            background-color: rgba(0, 8, 20, 0.9); backdrop-filter: blur(15px);
+            padding: 0 4%; height: 12vh; display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid rgba(255, 140, 0, 0.2); z-index: 1000;
+        }
+
+        .logo-container { display: flex; align-items: center; text-decoration: none; gap: 12px; }
+        .logo-img { height: 6.5vh; width: auto; filter: drop-shadow(0 0 8px var(--glow)); }
+        .logo-text { font-size: 1.1rem; font-weight: 900; color: white; line-height: 1.2; }
+        .logo-text span { color: var(--accent-orange); }
+
+        nav { display: flex; align-items: center; }
+        nav a { color: white; text-decoration: none; margin-right: 18px; font-weight: 600; font-size: 0.8rem; white-space: nowrap; }
+        nav a:hover { color: var(--accent-orange); }
+        .nav-contact { border: 1px solid var(--accent-orange); padding: 5px 15px; border-radius: 50px; background: rgba(255, 140, 0, 0.1); }
+
+        /* محتوى المبادرات */
+        .main-content {
+            flex-grow: 1; display: flex; flex-direction: column; align-items: center;
+            padding: 2vh 5%; justify-content: center;
+        }
+
+        .header-title { text-align: center; margin-bottom: 3vh; }
+        .header-title h2 { font-size: 2.2rem; font-weight: 900; color: #fff; }
+        .header-title h2 span { color: var(--accent-orange); }
+        .header-title p { color: #cbd5e0; font-size: 0.95rem; margin-top: 5px; }
+
+        .initiatives-container {
+            display: flex; gap: 20px; width: 100%; max-width: 1200px; justify-content: center;
+        }
+
+        .init-box {
+            background: var(--glass-white);
+            border: 1px solid rgba(255, 140, 0, 0.1);
+            border-radius: 20px;
+            padding: 25px;
+            width: 30%;
+            text-align: right;
+            position: relative;
+            overflow: hidden;
+            display: flex; flex-direction: column; justify-content: space-between;
+        }
+
+        .init-box:hover {
+            border-color: var(--accent-orange);
+            background: rgba(255, 140, 0, 0.05);
+            transform: scale(1.03);
+        }
+
+        .icon-tag {
+            background: var(--accent-orange);
+            color: #000;
+            width: fit-content;
+            padding: 2px 12px;
+            border-radius: 5px;
+            font-weight: 900;
+            font-size: 0.7rem;
+            margin-bottom: 15px;
+        }
+
+        .init-box h3 { font-size: 1.3rem; margin-bottom: 10px; color: #fff; }
+        .init-box p { font-size: 0.85rem; color: #a1a1aa; line-height: 1.6; margin-bottom: 20px; }
+
+        .btn-details {
+            color: var(--accent-orange);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: flex; align-items: center; gap: 5px;
+        }
+
+        /* التذييل الثابت */
+        footer {
+            height: 8vh; display: flex; align-items: center; justify-content: center;
+            background: rgba(0, 8, 20, 0.95); border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.8rem;
+        }
+        .designer-info span { color: var(--accent-orange); font-weight: bold; }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <a href="index.html" class="logo-container">
+                <img src="logo1.jpeg" alt="لوجو" class="logo-img">
+                <div class="logo-text">نقابة <span>المبرمجين</span><br>العراقيين</div>
+            </a>
+            <nav>
+                <a href="index.html">الرئيسية</a>
+                <a href="projects.html">المشاريع</a>
+                <a href="community.html">المجتمع</a>
+                <a href="initiatives.html" style="color: var(--accent-orange);">المبادرات</a>
+                <a href="creators.html">سجل المبتكرين</a>
+                <a href="support.html">الدعم</a>
+                <a href="contact.html">اتصل بنا</a>
+                <a href="membership.html" class="nav-contact">بوابة العضوية</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <div class="header-title">
+                <h2>مبادرات <span>النقابة</span></h2>
+                <p>مشاريع استراتيجية تهدف لتمكين المبرمج العراقي وقيادة التحول الرقمي.</p>
+            </div>
+
+            <div class="initiatives-container">
+                <div class="init-box">
+                    <div>
+                        <div class="icon-tag">تعليمية</div>
+                        <h3>كود العراق</h3>
+                        <p>مبادرة لتدريب 10,000 طالب على لغات البرمجة الحديثة لتهيئة جيل تقني واعد.</p>
+                    </div>
+                    <a href="#" class="btn-details">عرض التفاصيل ←</a>
+                </div>
+
+                <div class="init-box">
+                    <div>
+                        <div class="icon-tag">مهنية</div>
+                        <h3>رخصة المبرمج</h3>
+                        <p>وضع معايير مهنية ومنح رخص معتمدة للمبرمجين العراقيين لضمان الجودة في سوق العمل.</p>
+                    </div>
+                    <a href="#" class="btn-details">عرض التفاصيل ←</a>
+                </div>
+
+                <div class="init-box">
+                    <div>
+                        <div class="icon-tag">وطنية</div>
+                        <h3>التحول الرقمي</h3>
+                        <p>تقديم استشارات برمجية للقطاعات الحكومية والخاصة لتسريع الأتمتة والذكاء الاصطناعي.</p>
+                    </div>
+                    <a href="#" class="btn-details">عرض التفاصيل ←</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="designer-info">
+                تطوير ونمذجة المهندسة <span>م.د. ريم محمد خضير</span> | دكتوراه تكنولوجيا المعلومات &copy; 2026
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
